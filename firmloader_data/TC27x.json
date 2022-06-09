@@ -1,0 +1,1162 @@
+{
+    "brand": "Infineon",
+    "family": "AURIX",
+    "name": "TC27x",
+    "bits": 32,
+    "mode": 1,
+    "segments": [
+        {
+            "name": "SRAM1",
+            "start": "0x60000000",
+            "end": "0x6001dfff",
+            "size": "0x1e000",
+            "type": "DATA"
+        },
+        {
+            "name": "SRAM2",
+            "start": "0x6001e000",
+            "end": "0x6001ffff",
+            "size": "0x2000",
+            "type": "DATA"
+        },
+        {
+            "name": "SRAM3",
+            "start": "0x60100000",
+            "end": "0x60107fff",
+            "size": "0x8000",
+            "type": "DATA"
+        },
+        {
+            "name": "SRAM4",
+            "start": "0x60108000",
+            "end": "0x6010bfff",
+            "size": "0x4000",
+            "type": "DATA"
+        },
+        {
+            "name": "SRAM5",
+            "start": "0x70000000",
+            "end": "0x7001bfff",
+            "size": "0x1c000",
+            "type": "DATA"
+        },
+        {
+            "name": "SRAM6",
+            "start": "0x70100000",
+            "end": "0x70105fff",
+            "size": "0x6000",
+            "type": "DATA"
+        },
+        {
+            "name": "SRAM7",
+            "start": "0x70106000",
+            "end": "0x70107fff",
+            "size": "0x2000",
+            "type": "DATA"
+        }
+    ],
+    "peripherals": [
+        {
+            "name": "STM0",
+            "start": "0xF0000000",
+            "end": "0xF00000ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "STM1",
+            "start": "0xF0000100",
+            "end": "0xF00001ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "STM2",
+            "start": "0xF0000200",
+            "end": "0xF00002ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "Cerberus",
+            "start": "0xF0000400",
+            "end": "0xF00005ff",
+            "size": "0x200",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "ASCLIN0",
+            "start": "0xF0000600",
+            "end": "0xF00006ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "ASCLIN1",
+            "start": "0xF0000700",
+            "end": "0xF00007ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "ASCLIN2",
+            "start": "0xF0000800",
+            "end": "0xF00008ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "ASCLIN3",
+            "start": "0xF0000900",
+            "end": "0xF00009ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "QSPI0",
+            "start": "0xF0001c00",
+            "end": "0xF0001cff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "QSPI1",
+            "start": "0xF0001d00",
+            "end": "0xF0001dff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "QSPI2",
+            "start": "0xF0001e00",
+            "end": "0xF0001eff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "QSPI3",
+            "start": "0xF0001f00",
+            "end": "0xF0001fff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "MSC0",
+            "start": "0xF0002600",
+            "end": "0xF00026ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "MSC1",
+            "start": "0xF0002700",
+            "end": "0xF00027ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "CCU60",
+            "start": "0xF0002a00",
+            "end": "0xF0002aff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "CCU61",
+            "start": "0xF0002b00",
+            "end": "0xF0002bff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "GPT120",
+            "start": "0xF0002e00",
+            "end": "0xF0002eff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "SENT",
+            "start": "0xF0003000",
+            "end": "0xF0003aff",
+            "size": "0xb00",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "FCE",
+            "start": "0xF0003f00",
+            "end": "0xF0003fff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "PSI5",
+            "start": "0xF0005000",
+            "end": "0xF0006fff",
+            "size": "0x2000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "PSI5-S",
+            "start": "0xF0007000",
+            "end": "0xF0007fff",
+            "size": "0x1000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "DMA",
+            "start": "0xF0010000",
+            "end": "0xF0013fff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "CAN",
+            "start": "0xF0018000",
+            "end": "0xF001bfff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+                {
+                    "name": "LIST00",
+                    "offset": "0x100",
+                    "size": "0x20"
+                },
+                {
+                    "name": "LIST01",
+                    "offset": "0x104",
+                    "size": "0x20"
+                },
+                {
+                    "name": "LIST02",
+                    "offset": "0x108",
+                    "size": "0x20"
+                },
+                {
+                    "name": "LIST03",
+                    "offset": "0x10c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "LIST04",
+                    "offset": "0x110",
+                    "size": "0x20"
+                },
+                {
+                    "name": "LIST05",
+                    "offset": "0x114",
+                    "size": "0x20"
+                },
+                {
+                    "name": "LIST06",
+                    "offset": "0x118",
+                    "size": "0x20"
+                },
+                {
+                    "name": "LIST07",
+                    "offset": "0x11c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "LIST08",
+                    "offset": "0x120",
+                    "size": "0x20"
+                },
+                {
+                    "name": "LIST09",
+                    "offset": "0x124",
+                    "size": "0x20"
+                },
+                {
+                    "name": "LIST10",
+                    "offset": "0x128",
+                    "size": "0x20"
+                },
+                {
+                    "name": "LIST11",
+                    "offset": "0x12c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "LIST12",
+                    "offset": "0x130",
+                    "size": "0x20"
+                },
+                {
+                    "name": "LIST13",
+                    "offset": "0x134",
+                    "size": "0x20"
+                },
+                {
+                    "name": "LIST14",
+                    "offset": "0x138",
+                    "size": "0x20"
+                },
+                {
+                    "name": "LIST15",
+                    "offset": "0x13c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MSPND0",
+                    "offset": "0x140",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MSPND1",
+                    "offset": "0x144",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MSPND2",
+                    "offset": "0x148",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MSPND3",
+                    "offset": "0x14c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MSPND4",
+                    "offset": "0x150",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MSPND5",
+                    "offset": "0x154",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MSPND6",
+                    "offset": "0x158",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MSPND7",
+                    "offset": "0x15c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MSID0",
+                    "offset": "0x180",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MSID1",
+                    "offset": "0x184",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MSID2",
+                    "offset": "0x188",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MSID3",
+                    "offset": "0x18c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MSID4",
+                    "offset": "0x190",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MSID5",
+                    "offset": "0x194",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MSID6",
+                    "offset": "0x198",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MSID7",
+                    "offset": "0x19c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MSIMASK",
+                    "offset": "0x1c0",
+                    "size": "0x20"
+                },
+                {
+                    "name": "PANCTR",
+                    "offset": "0x1c4",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MCR",
+                    "offset": "0x1c8",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MITR",
+                    "offset": "0x1cc",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MECR",
+                    "offset": "0x1d0",
+                    "size": "0x20"
+                },
+                {
+                    "name": "MESTAT",
+                    "offset": "0x1d4",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NCR0",
+                    "offset": "0x200",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NSR0",
+                    "offset": "0x204",
+                    "size": "0x20"
+                },
+                {
+                    "name": "INT0",
+                    "offset": "0x208",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NPCR0",
+                    "offset": "0x20c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NBTR0",
+                    "offset": "0x210",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NECNT0",
+                    "offset": "0x214",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NFCR0",
+                    "offset": "0x218",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NCTCCR0",
+                    "offset": "0x21c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTRTR0",
+                    "offset": "0x220",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTATTR0",
+                    "offset": "0x224",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTBTTR0",
+                    "offset": "0x228",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTCTTR0",
+                    "offset": "0x22c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "FNBTR0",
+                    "offset": "0x238",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTDCR0",
+                    "offset": "0x23c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NCR1",
+                    "offset": "0x300",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NSR1",
+                    "offset": "0x304",
+                    "size": "0x20"
+                },
+                {
+                    "name": "INT1",
+                    "offset": "0x308",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NPCR1",
+                    "offset": "0x30c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NBTR1",
+                    "offset": "0x310",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NECNT1",
+                    "offset": "0x314",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NFCR1",
+                    "offset": "0x318",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NCTCCR1",
+                    "offset": "0x31c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTRTR1",
+                    "offset": "0x320",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTATTR1",
+                    "offset": "0x324",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTBTTR1",
+                    "offset": "0x328",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTCTTR1",
+                    "offset": "0x32c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "FNBTR1",
+                    "offset": "0x338",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTDCR1",
+                    "offset": "0x33c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NCR2",
+                    "offset": "0x400",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NSR2",
+                    "offset": "0x404",
+                    "size": "0x20"
+                },
+                {
+                    "name": "INT2",
+                    "offset": "0x408",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NPCR2",
+                    "offset": "0x40c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NBTR2",
+                    "offset": "0x410",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NECNT2",
+                    "offset": "0x414",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NFCR2",
+                    "offset": "0x418",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NCTCCR2",
+                    "offset": "0x41c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTRTR2",
+                    "offset": "0x420",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTATTR2",
+                    "offset": "0x424",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTBTTR2",
+                    "offset": "0x428",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTCTTR2",
+                    "offset": "0x42c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "FNBTR2",
+                    "offset": "0x438",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTDCR2",
+                    "offset": "0x43c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NCR3",
+                    "offset": "0x500",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NSR3",
+                    "offset": "0x504",
+                    "size": "0x20"
+                },
+                {
+                    "name": "INT3",
+                    "offset": "0x508",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NPCR3",
+                    "offset": "0x50c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NBTR3",
+                    "offset": "0x510",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NECNT3",
+                    "offset": "0x514",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NFCR3",
+                    "offset": "0x518",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NCTCCR3",
+                    "offset": "0x51c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTRTR3",
+                    "offset": "0x520",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTATTR3",
+                    "offset": "0x524",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTBTTR3",
+                    "offset": "0x528",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTCTTR3",
+                    "offset": "0x52c",
+                    "size": "0x20"
+                },
+                {
+                    "name": "FNBTR3",
+                    "offset": "0x538",
+                    "size": "0x20"
+                },
+                {
+                    "name": "NTDCR3",
+                    "offset": "0x53c",
+                    "size": "0x20"
+                }
+            ]
+        },
+        {
+            "name": "ERAY",
+            "start": "0xF001c000",
+            "end": "0xF001cfff",
+            "size": "0x1000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "ETHCTL",
+            "start": "0xF001d000",
+            "end": "0xF001d0ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "ETH",
+            "start": "0xF001e000",
+            "end": "0xF001efff",
+            "size": "0x1000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "VADC",
+            "start": "0xF0020000",
+            "end": "0xF0023fff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "DSADC",
+            "start": "0xF0024000",
+            "end": "0xF0024fff",
+            "size": "0x1000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "BCU",
+            "start": "0xF0030000",
+            "end": "0xF00300ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "IOM",
+            "start": "0xF0035000",
+            "end": "0xF00351ff",
+            "size": "0x200",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "SCU",
+            "start": "0xF0036000",
+            "end": "0xF00363ff",
+            "size": "0x400",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "SMU",
+            "start": "0xF0036800",
+            "end": "0xF0036fff",
+            "size": "0x800",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "IR",
+            "start": "0xF0037000",
+            "end": "0xF0037fff",
+            "size": "0x1000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "IR_SRC",
+            "start": "0xF0038000",
+            "end": "0xF0039fff",
+            "size": "0x2000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "P00",
+            "start": "0xF003a000",
+            "end": "0xF003a0ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "P01",
+            "start": "0xF003a100",
+            "end": "0xF003a1ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "P02",
+            "start": "0xF003a200",
+            "end": "0xF003a2ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "P10",
+            "start": "0xF003b000",
+            "end": "0xF003b0ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "P11",
+            "start": "0xF003b100",
+            "end": "0xF003b1ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "P12",
+            "start": "0xF003b200",
+            "end": "0xF003b2ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "P13",
+            "start": "0xF003b300",
+            "end": "0xF003b3ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "P14",
+            "start": "0xF003b400",
+            "end": "0xF003b4ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "P15",
+            "start": "0xF003b500",
+            "end": "0xF003b5ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "P20",
+            "start": "0xF003c000",
+            "end": "0xF003c0ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "P21",
+            "start": "0xF003c100",
+            "end": "0xF003c1ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "P22",
+            "start": "0xF003c200",
+            "end": "0xF003c2ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "P23",
+            "start": "0xF003c300",
+            "end": "0xF003c3ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "P32",
+            "start": "0xF003d200",
+            "end": "0xF003d2ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "P33",
+            "start": "0xF003d300",
+            "end": "0xF003d3ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "P34",
+            "start": "0xF003d400",
+            "end": "0xF003d4ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "P40",
+            "start": "0xF003e000",
+            "end": "0xF003e0ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "HSM",
+            "start": "0xF0040000",
+            "end": "0xF005ffff",
+            "size": "0x20000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "MTU",
+            "start": "0xF0060000",
+            "end": "0xF006ffff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "HSSL",
+            "start": "0xF0080000",
+            "end": "0xF00803ff",
+            "size": "0x400",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "HSCT",
+            "start": "0xF0090000",
+            "end": "0xF009ffff",
+            "size": "0x10000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "I2C0",
+            "start": "0xF00c0000",
+            "end": "0xF00cffff",
+            "size": "0x10000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "I2C0_CTL",
+            "start": "0xF00d0000",
+            "end": "0xF00d00ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "GTM",
+            "start": "0xF0100000",
+            "end": "0xF019ffff",
+            "size": "0x120000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "PMU0",
+            "start": "0xF8000500",
+            "end": "0xF80005ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "PMU0_FL",
+            "start": "0xF8001000",
+            "end": "0xF80023ff",
+            "size": "0x2400",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "XBar_SRI",
+            "start": "0xF8700000",
+            "end": "0xF87004ff",
+            "size": "0x500",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "LMU",
+            "start": "0xF8700800",
+            "end": "0xF87008ff",
+            "size": "0x100",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "DAM",
+            "start": "0xF8700900",
+            "end": "0xF8700bff",
+            "size": "0x300",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "CPU0_SFR",
+            "start": "0xF8800000",
+            "end": "0xF880FFFF",
+            "size": "0x10000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "CPU0_CSFR",
+            "start": "0xF8810000",
+            "end": "0xF881FFFF",
+            "size": "0x10000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "CPU1_SFR",
+            "start": "0xF8820000",
+            "end": "0xF882FFFF",
+            "size": "0x10000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "CPU1_CSFR",
+            "start": "0xF8830000",
+            "end": "0xF883FFFF",
+            "size": "0x10000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "CPU2_SFR",
+            "start": "0xF8840000",
+            "end": "0xF884FFFF",
+            "size": "0x10000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "CPU2_CSFR",
+            "start": "0xF8850000",
+            "end": "0xF885FFFF",
+            "size": "0x10000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "HSM2",
+            "start": "0xFf110000",
+            "end": "0xFf11ffff",
+            "size": "0x10000",
+            "comment": "",
+            "registers": [
+            ]
+        }
+    ],
+    "vector_table": [
+    ]
+}

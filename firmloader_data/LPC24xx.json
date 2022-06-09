@@ -1,0 +1,364 @@
+{
+    "brand": "NXP",
+    "family": "LPC24",
+    "name": "LPC24xx",
+    "bits": 32,
+    "mode": 1,
+    "segments": [
+        {
+            "name": "SRAM",
+            "start": "0x40000000",
+            "end": "0x4000ffff",
+            "size": "0x10000",
+            "type": "DATA"
+        },
+        {
+            "name": "ETH_RAM",
+            "start": "0x7FE00000 ",
+            "end": "0x7FE03FFF",
+            "size": "0x4000",
+            "type": "DATA"
+        },
+        {
+            "name": "USB_RAM",
+            "start": "0x7FD00000 ",
+            "end": "0x7FD03FFF",
+            "size": "0x4000",
+            "type": "DATA"
+        }
+    ],
+    "peripherals": [
+        {
+            "name": "Watchdog_Timer",
+            "start": "0xE0000000",
+            "end": "0xE0003fff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "TIMER_0",
+            "start": "0xE0004000",
+            "end": "0xE0007fff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "TIMER_1",
+            "start": "0xE0008000",
+            "end": "0xE000Bfff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "UART0",
+            "start": "0xE000C000",
+            "end": "0xE000ffff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "UART1",
+            "start": "0xE0010000",
+            "end": "0xE0013fff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "PWM0",
+            "start": "0xE0014000",
+            "end": "0xe0017fff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "PWM1",
+            "start": "0xE0018000",
+            "end": "0xE001bfff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "I2C0",
+            "start": "0xE001C000",
+            "end": "0xE001ffff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "SPI",
+            "start": "0xE0020000",
+            "end": "0xE0023fff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "RTC",
+            "start": "0xE0024000",
+            "end": "0xE0027fff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "GPIO",
+            "start": "0xE0028000",
+            "end": "0xE002bfff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "Pin_Connected_Block",
+            "start": "0xE002C000",
+            "end": "0xE002ffff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "SSP1",
+            "start": "0xE0030000",
+            "end": "0xE0033fff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "ADC",
+            "start": "0xE0034000",
+            "end": "0xE0037fff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "CAN_ACCEPTANCE_FILTR_RAM",
+            "start": "0xE0038000",
+            "end": "0xE003bfff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "CAN_ACCEPTANCE_FILTR_REGS",
+            "start": "0xE003c000",
+            "end": "0xE003ffff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "CAN_CMN_REGS",
+            "start": "0xE0040000",
+            "end": "0xE0043fff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "CAN_CONTROLLER_1",
+            "start": "0xE0044000",
+            "end": "0xE0047fff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "CAN_CONTROLLER_2",
+            "start": "0xE0048000",
+            "end": "0xE004bfff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "PERIPHERAL_NAME",
+            "start": "0x40000000",
+            "end": "0x40003fff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "I2C1",
+            "start": "0xE005C000",
+            "end": "0xE005ffff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "SSP0",
+            "start": "0xE0068000",
+            "end": "0xE006bfff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "DAC",
+            "start": "0xE006C000",
+            "end": "0xE006ffff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "TIMER_2",
+            "start": "0xE0070000",
+            "end": "0xE0073fff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "TIMER_3",
+            "start": "0xE0074000",
+            "end": "0xE0077fff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "UART2",
+            "start": "0xE0078000",
+            "end": "0xE007bfff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "UART3",
+            "start": "0xE007C000",
+            "end": "0xE007ffff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "I2C2",
+            "start": "0xE0080000",
+            "end": "0xE0083fff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "BATTERY_RAM",
+            "start": "0xE0084000",
+            "end": "0xE0087fff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "I2S",
+            "start": "0xE0088000",
+            "end": "0xE008bfff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "SD_MMC_CART_INTERFACE",
+            "start": "0xE008C000",
+            "end": "0xE008ffff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        },
+        {
+            "name": "SYSTEM_CONTROL_BLOCK",
+            "start": "0xE01FC000",
+            "end": "0xE01Fffff",
+            "size": "0x4000",
+            "comment": "",
+            "registers": [
+            ]
+        }
+    ],
+    "vector_table": [
+        {
+            "name": "Reset",
+            "value": -1,
+            "addr": "0x0",
+            "comment": ""
+        },
+        {
+            "name": "Undefined",
+            "value": -1,
+            "addr": "0x4",
+            "comment": ""
+        },
+        {
+            "name": "Software Interupt",
+            "value": -1,
+            "addr": "0x8",
+            "comment": ""
+        },
+        {
+            "name": "Prefetch Abort",
+            "value": -1,
+            "addr": "0xc",
+            "comment": ""
+        },
+        {
+            "name": "Data Abort",
+            "value": -1,
+            "addr": "0x10",
+            "comment": ""
+        },
+        {
+            "name": "IRQ",
+            "value": -1,
+            "addr": "0x18",
+            "comment": ""
+        },
+        {
+            "name": "FIQ",
+            "value": -1,
+            "addr": "0x1c",
+            "comment": ""
+        }
+    ]
+}
