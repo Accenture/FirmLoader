@@ -654,7 +654,7 @@
         },
         {
             "name": "CSIG0_OTHER",
-            "start": "0xffd92000",
+            "start": "0xffd89000",
             "end": "0xffd8901f",
             "size": "0x20",
             "comment": "",

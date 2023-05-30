@@ -37,20 +37,21 @@ class Firmloader(idaapi.action_handler_t):
                 # Set mode
             for segment_ea in idautils.Segments():
                 # Set mode Thumb/ARM if ARM architecture
-                if idaapi.get_inf_structure().procname == 'ARM':
+                if idaapi.get_inf_structure().procname == 'ARM' and found_rom:
                     idaapi.split_sreg_range(rom_segment, idaapi.str2reg("T"), current_mcu["mode"], idaapi.SR_user)
             # Create peripherals
             for peripheral in current_mcu["peripherals"]:
-                # Start of the peripheral struct
-                start = int(peripheral["start"],16)
-                end = int(peripheral["end"],16)
-                ida_segment.add_segm(0,start,end,peripheral["name"],"DATA",0)
-                if peripheral["registers"]:
-                    for register in peripheral["registers"]:
-                        offset = int(register["offset"],16)
-                        idc.set_name(start + offset, f'{peripheral["name"]}_{register["name"]}', idc.SN_NOCHECK)
-                # Add comment if any
-                idc.set_cmt(start,peripheral["comment"],False)
+                if ida_kernwin.ask_yn(1, "Would you like to load peripherals?"):
+                    # Start of the peripheral struct
+                    start = int(peripheral["start"],16)
+                    end = int(peripheral["end"],16)
+                    ida_segment.add_segm(0,start,end,peripheral["name"],"DATA",0)
+                    if peripheral["registers"]:
+                        for register in peripheral["registers"]:
+                            offset = int(register["offset"],16)
+                            idc.set_name(start + offset, f'{peripheral["name"]}_{register["name"]}', idc.SN_NOCHECK)
+                    # Add comment if any
+                    idc.set_cmt(start,peripheral["comment"],False)
             # Crate vector table
             if current_mcu["vector_table"]:
                 if ida_kernwin.ask_yn(1, "Would you like to also populate the vector table?"):
@@ -98,7 +99,8 @@ class Firmloader(idaapi.action_handler_t):
                                     ida_funcs.add_func(destination)
                                     idc.set_name(destination, vector["name"] + "_handler", idc.SN_NOCHECK | idc.SN_PUBLIC)
             # All is done at this point, mark the ROM segment for auto-analysis
-            idc.auto_mark_range(rom_segment,idc.get_segm_end(rom_segment),idaapi.AU_WEAK) # Let IDA decide what is code and what is not
+            if found_rom:
+                idc.auto_mark_range(rom_segment,idc.get_segm_end(rom_segment),idaapi.AU_WEAK) # Let IDA decide what is code and what is not
 
     # This action is always available.
     def update(self, ctx):
