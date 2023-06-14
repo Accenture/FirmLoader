@@ -40,8 +40,8 @@ class Firmloader(idaapi.action_handler_t):
                 if idaapi.get_inf_structure().procname == 'ARM' and found_rom:
                     idaapi.split_sreg_range(rom_segment, idaapi.str2reg("T"), current_mcu["mode"], idaapi.SR_user)
             # Create peripherals
-            for peripheral in current_mcu["peripherals"]:
-                if ida_kernwin.ask_yn(1, "Would you like to load peripherals?"):
+            if ida_kernwin.ask_yn(1, "Would you like to load peripherals?"):
+                for peripheral in current_mcu["peripherals"]:
                     # Start of the peripheral struct
                     start = int(peripheral["start"],16)
                     end = int(peripheral["end"],16)
