@@ -10,12 +10,42 @@ import ida_bytes
 import idautils
 import ida_kernwin
 
+
+class FirmwareChooser(ida_kernwin.Choose):
+    def __init__(self, firmwares):
+        ida_kernwin.Choose.__init__(self, "Select firmware", [["Name", 30 | ida_kernwin.CHCOL_PLAIN]], flags = ida_kernwin.CH_QFLT)
+        self.firmware_list = firmwares
+
+    def OnGetSize(self):
+        return len(self.firmware_list)
+
+    def OnGetLine(self, n):
+        return [self.firmware_list[n]["name"]]
+
+
 class Firmloader(idaapi.action_handler_t):
     def __init__(self):
         idaapi.action_handler_t.__init__(self)
 
-
     def activate(self, ctx):
+        firmware_list = []
+        for file_name in sorted(os.listdir(os.path.join(os.path.dirname(os.path.realpath(__file__)),"firmloader_data"))):
+            with open(os.path.join(os.path.dirname(os.path.realpath(__file__)),"firmloader_data",file_name)) as data_file:
+                data = json.load(data_file)
+                key = file_name.replace(".json","")
+                if data["family"]:
+                    display_name = data["brand"] + "/" + data["family"] + "/"+ data["name"]
+                else:
+                    display_name = data["brand"] + "/" + data["name"]
+
+                firmware_list.append({"key": key, "name": display_name})
+
+        chooser = FirmwareChooser(firmware_list)
+        if (sel := chooser.Show(True)) == -1:
+            return
+
+        chosen_key = firmware_list[sel]["key"]
+
         found_rom = False
         rom_segment = 0
         for segment_ea in idautils.Segments():
@@ -27,7 +57,7 @@ class Firmloader(idaapi.action_handler_t):
         if not found_rom:
             ida_kernwin.warning("Segment with name \"ROM\" does not exist. Please, rename the main code segment to \"ROM\" and run the plugin again.")
             return
-        with open(os.path.join(os.path.dirname(os.path.realpath(__file__)),"firmloader_data",ctx.action + ".json")) as data_file:
+        with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), "firmloader_data", chosen_key + ".json")) as data_file:
             current_mcu = json.load(data_file)
             # Create segments
             for segment in current_mcu["segments"]:
@@ -115,24 +145,17 @@ class firmloader_t(idaapi.plugin_t):
     flags = idaapi.PLUGIN_KEEP
 
     def init(self):
-        for file_name in sorted(os.listdir(os.path.join(os.path.dirname(os.path.realpath(__file__)),"firmloader_data"))):
-            #print(file_name)
-            with open(os.path.join(os.path.dirname(os.path.realpath(__file__)),"firmloader_data",file_name)) as data_file:
-                data = json.load(data_file)
-                key = file_name.replace(".json","")
-                if data["family"]:
-                    menu_entry = "Edit/FirmLoader/"+ data["brand"] + "/" + data["family"] + "/"+ data["name"]
-                else:
-                    menu_entry = "Edit/FirmLoader/"+ data["brand"] + "/" + data["name"]
-                action_desc = idaapi.action_desc_t(
-                    key,   # The action name. This acts like an ID and must be unique
-                    data["name"],  # The action text.
-                    Firmloader(),   # The action handler.
-                    '',      # Optional: the action shortcut
-                    'Process firmware binary.'  # Optional: the action tooltip (available in menus/toolbar)
-                    )           # Optional: the action icon (shows when in menus/toolbars)
-                idaapi.register_action(action_desc)
-                idaapi.attach_action_to_menu(menu_entry, key, idaapi.SETMENU_APP)
+        load_action_id = "firmloader:load"
+        load_action = idaapi.action_desc_t(
+            load_action_id,
+            "Apply firmware info...",
+            Firmloader(),
+            '',
+            "Apply known firmware info to the database."
+        )
+
+        idaapi.register_action(load_action)
+        idaapi.attach_action_to_menu("Edit/FirmLoader/Apply firmware info...", load_action_id, idaapi.SETMENU_APP)
 
     def run(self):
         pass
