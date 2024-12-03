@@ -9,6 +9,7 @@ import ida_xref
 import ida_bytes
 import idautils
 import ida_kernwin
+import ida_ida
 
 
 class FirmwareChooser(ida_kernwin.Choose):
@@ -67,7 +68,8 @@ class Firmloader(idaapi.action_handler_t):
                 # Set mode
             for segment_ea in idautils.Segments():
                 # Set mode Thumb/ARM if ARM architecture
-                if idaapi.get_inf_structure().procname == 'ARM' and found_rom:
+                _procname = ida_ida.inf_get_procname().lower() if idaapi.IDA_SDK_VERSION >= 900 else idaapi.get_inf_structure()
+                if _procname == 'ARM' and found_rom:
                     idaapi.split_sreg_range(rom_segment, idaapi.str2reg("T"), current_mcu["mode"], idaapi.SR_user)
             # Create peripherals
             if ida_kernwin.ask_yn(1, "Would you like to load peripherals?"):
@@ -118,7 +120,8 @@ class Firmloader(idaapi.action_handler_t):
                             # Get XREF destination
                             destination = ida_bytes.get_32bit(addr)
                             # If ARM account for Thumb mode
-                            if idaapi.get_inf_structure().procname == 'ARM' and destination % 2 == 1: # Thumb mode
+                            _procname = ida_ida.inf_get_procname().lower() if idaapi.IDA_SDK_VERSION >= 900 else idaapi.get_inf_structure()
+                            if _procname == 'ARM' and destination % 2 == 1: # Thumb mode
                                 destination = destination - 1
                             # If the segment is CODE
                             if ida_segment.get_segm_class(ida_segment.getseg(destination)) == "CODE":
